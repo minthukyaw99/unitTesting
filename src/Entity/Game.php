@@ -42,8 +42,15 @@ class Game {
         return $this->imagePath;
     }
     
-    public function setImagePath($path)
+    public function setImagePath($path = null)
     {
-        $this->imagePath = $path;
+        if($path == null)
+        {
+            $this->imagePath = '/image/placeholder.jpg';
+        }
+        else
+        {
+            $this->imagePath = $path;
+        }
     }
 }
